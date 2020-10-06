@@ -98,7 +98,27 @@ let flights = [{
 
 //***hint: use the find method***
 
+
 function flightCost(destination, firstClass) {
+    let flight = {}
+
+    for(let i = 0; i < flights.length; i++){
+        const currentFlight = flights[i]
+        if(currentFlight.to == destination.toUpperCase()){
+            flight = currentFlight
+        }
+    }
+    if(firstClass == true){
+        return flight.prices.firstClass
+    }else{
+        return flight.prices.standard
+    }
+    // if(firstClass == true){
+    //     return flight.prices.firstClass
+    // }
+    //     return flight.prices.standard
+
+    //     return firstClass? flight.prices.firstClass: flight.prices.standard
     
 }
 
@@ -120,7 +140,18 @@ let staff = [{ id: 1, name: 'Jon' }, { id: 2, name: 'Yuli' }, { id: 21, name: 'P
 { id: 881, name: 'Paul' }, { id: 0, name: 'Jon' }, { id: 999, name: 'Timma' }]
 
 function findById(id) {
+    let user = {}
 
+    for(let i = 0; i < staff.length; i++){
+        let checkID = staff[i]
+        if(checkID.id == id){
+            return user = checkID
+        }
+        else if(checkID.id != id){
+            user = {error: "No user with that id."}
+        }
+    }
+    return user
 }
 
 
@@ -147,4 +178,5 @@ let theBand = {
 }
 
 function bandMemberDetails(name) {
+    
 }
