@@ -33,7 +33,11 @@ function largestNum(arr) {
 // output: [16, 8, 4, 28]
 
 function elemsTimesLength(arr) {
-    
+    let mulitplier = arr.length
+
+    for(i = 0; i < mulitplier; i *= mulitplier){
+        return arr
+    }
 }
 
 
