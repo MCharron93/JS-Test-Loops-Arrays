@@ -33,11 +33,12 @@ function largestNum(arr) {
 // output: [16, 8, 4, 28]
 
 function elemsTimesLength(arr) {
-    let mulitplier = arr.length
+    let newArray = []
 
-    for(i = 0; i < mulitplier; i *= mulitplier){
-        return arr
+    for(let i = 0; i <= arr.length -1; i++){
+        newArray.push(arr[i] * arr.length)
     }
+    return newArray
 }
 
 
@@ -51,7 +52,19 @@ function elemsTimesLength(arr) {
 // Primitive data types - https://developer.mozilla.org/en-US/docs/Glossary/Primitive
 
 function arrayFlattener(arr) {
+    let singleArray = []
+    let outPutArray = []
 
+    singleArray = arr.flat(Number.MAX_SAFE_INTEGER)
+    singleArray.forEach(elem => {
+        console.log(typeof elem)
+        if(typeof elem == "number" || typeof elem == "string"){
+            outPutArray.push(elem)
+        }
+    })
+    console.log(singleArray)
+    console.log('output', outPutArray)
+    return outPutArray
 }
 
 
@@ -83,10 +96,10 @@ let flights = [{
     }
 }]
 
+//***hint: use the find method***
 
 function flightCost(destination, firstClass) {
-    //***hint: use the find method***
-
+    
 }
 
 
