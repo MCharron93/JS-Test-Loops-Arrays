@@ -60,7 +60,6 @@ function arrayFlattener(arr) {
             outPutArray.push(elem)
         }
     })
-    console.log('output', outPutArray)
     return outPutArray
 }
 
