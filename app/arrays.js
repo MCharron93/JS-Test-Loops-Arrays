@@ -52,17 +52,14 @@ function elemsTimesLength(arr) {
 // Primitive data types - https://developer.mozilla.org/en-US/docs/Glossary/Primitive
 
 function arrayFlattener(arr) {
-    let singleArray = []
     let outPutArray = []
 
-    singleArray = arr.flat(Number.MAX_SAFE_INTEGER)
+    let singleArray = arr.flat(Number.MAX_SAFE_INTEGER)
     singleArray.forEach(elem => {
-        console.log(typeof elem)
         if(typeof elem == "number" || typeof elem == "string"){
             outPutArray.push(elem)
         }
     })
-    console.log(singleArray)
     console.log('output', outPutArray)
     return outPutArray
 }
